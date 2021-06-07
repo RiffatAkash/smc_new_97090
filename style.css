@@ -1,0 +1,227 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background: 100% 100% no-repeat;
+  cursor: pointer;
+  transition: all 0.7s ease;
+}
+.absolute {
+  position: absolute;
+}
+body,
+html {
+  height: 90px;
+  width: 970px;
+  position: relative;
+  overflow: hidden;
+}
+.logo{
+  width: 62px;
+  height: 75px;
+  background: url("assets/logo.png");
+  top: 8px;
+  right: 20px;
+  z-index: 4;
+}
+[class^="pp_box__"] {
+  height: 90px;
+  width: 970px;
+  background: url("assets/bg.jpg");
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+  /* animation: slide 10s linear infinite; */
+}
+/* @-webkit-keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1000px 0;
+  }
+} */
+.pp_box__2 {
+  /* background: url("assets/97090bg.jpg"); */
+  left: 0px;
+  opacity: 0;
+  z-index: 2;
+}
+.pp_box_logo {
+  height: 41px;
+  width: 102px;
+  background: url("assets/water\ logo.png");
+  top: 20px;
+  left: 15px;
+}
+.pp_box_models {
+  height: 88px;
+  width: 310px;
+  background: url("assets/text1.png");
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  margin: 0 auto;
+}
+
+.pp_box_cta {
+  height: 39px;
+  width: 120px;
+  background: url("assets/text3.png");
+  top: 20px;
+  left: 300px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  animation: bounceIn 1.55s linear infinite;
+  animation-delay: 1s;
+}
+.pp_box_text_2{
+  height: 79px;
+  width: 91px;
+  background: url("assets/text4.png");
+  top: 5px;
+  right: 330px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  animation: bounceIn 1.55s linear infinite;
+  animation-delay: 1s;
+}
+.pp_box_pack {
+  height: 88px;
+  width: 102px;
+  background: url("assets/sakib.png");
+  top: 2px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+/* -webkit-animation: makeUpDown 6s infinite 1s; */
+  animation: makeUpDown 5s both infinite 0s;
+  opacity: 1;
+  }
+  @keyframes makeUpDown {
+  0% {
+    opacity: 1;
+    margin-top: 15%;
+  }
+  50%,70% {
+    opacity: 1;
+    margin-top: 0%;
+  }
+}
+
+.fadeInZoom {
+  animation-delay: 1s;
+  animation: fadeInZoom 1;
+  animation-duration: 2.25s;
+  animation-fill-mode: both;
+}
+@keyframes fadeInZoom {
+  0% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale3d(0.9, 0.9, 0.9) translate3d(0, 10px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+.popin {
+  animation-delay: 1s;
+  animation: popin 1s linear 1;
+  animation-fill-mode: both;
+}
+@keyframes popin {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  33% {
+    transform: scale(0.33);
+    opacity: 0.3;
+  }
+  67% {
+    transform: scale(0.67);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.bottle {
+  animation: bottle 3s ease-in-out infinite;
+}
+@keyframes bottle {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  10% {
+    transform: rotateZ(-3deg);
+  }
+  20% {
+    transform: rotateZ(3deg);
+  }
+  30% {
+    transform: rotateZ(-3deg);
+  }
+  40% {
+    transform: rotateZ(3deg);
+  }
+  50% {
+    transform: rotateZ(-3deg);
+  }
+  60% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+/* @keyframes makeUpDown {
+    0%,100%{
+        transform: translateY(150px);
+    }
+    10%,90%{
+        transform: translateY(0px);
+    }
+} */
